@@ -1,15 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class NumberButtonController : MonoBehaviour {
 
     [SerializeField] InputField inputField;
     [SerializeField] int num = 0;
+    [SerializeField] GameObject objects;
 
     public void tap1Button()
     {
+        Debug.Log("tap 1 button");
         num = num * 10 + 1;
         inputField.text = num.ToString();
     }
@@ -70,7 +70,29 @@ public class NumberButtonController : MonoBehaviour {
 
     public void tapDecisionButton()
     {
-       
+        switch (num)
+        {
+            case 1:
+                break;
+            case 2:
+                objects.transform.position = new Vector3(3.3f, 0, 0.8f);
+                objects.transform.rotation = Quaternion.Euler(0, -54.3f, 0);
+                break;
+            case 3:
+                objects.transform.position = new Vector3(0.35f, 0, 9.1f);
+                objects.transform.rotation = Quaternion.Euler(0, -175.1f, 0);
+                break;
+            case 4:
+                objects.transform.position = new Vector3(-4.2f, 0, 1.4f);
+                objects.transform.rotation = Quaternion.Euler(0, 80.6f, 0);
+                break;
+            default:
+                inputField.text = null;
+                num = 0;
+                return;
+        }
+        objects.SetActive(true);
+        this.gameObject.SetActive(false);
     }
 
     public void tapDeleteButton()

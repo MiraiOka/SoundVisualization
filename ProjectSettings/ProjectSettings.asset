@@ -564,11 +564,11 @@ PlayerSettings:
   m_MobileRenderingPath: 1
   metroPackageName: SoundVisualization
   metroPackageVersion: 
-  metroCertificatePath: 
+  metroCertificatePath: C:\Users\gakubu2018\Documents\Study\SoundVisualization\Assets\WSATestCertificate.pfx
   metroCertificatePassword: 
-  metroCertificateSubject: 
-  metroCertificateIssuer: 
-  metroCertificateNotAfter: 0000000000000000
+  metroCertificateSubject: DefaultCompany
+  metroCertificateIssuer: DefaultCompany
+  metroCertificateNotAfter: 00f8488f1390d501
   metroApplicationDescription: SoundVisualization
   wsaImages: {}
   metroTileShortName: 
