@@ -1,12 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using uOSC;
 using UnityEngine.UI;
 
 public class ServerManager : MonoBehaviour {
 
-    [SerializeField] GameObject[] fires;
+    [SerializeField] GameObject[] fires1;
+    [SerializeField] GameObject[] fires2;
     [SerializeField] Text text;
 
 
@@ -17,27 +16,62 @@ public class ServerManager : MonoBehaviour {
 	
 	void OnDataReceived(Message message)
     {
-        float msg;
-        msg = (float)message.values[0];
-        Debug.Log(msg);
-        text.text = msg.ToString();
+        int num;
+        num = (int)message.values[0];
+        float vol;
+        vol = (float)message.values[1];
+        Debug.Log(vol);
+        text.text = vol.ToString();
 
-        if(msg > 5)
+        switch (num)
         {
-            for (int i = 0; i < fires.Length; i++)
-            {
-                fires[i].transform.localScale += new Vector3(0.01f, 0.01f, 0.01f);
-            }
-        } else
-        {
-            if(fires[0].transform.localScale.x > 0)
-            {
-                for (int i = 0; i < fires.Length; i++)
+            case 1:
+                if (vol > 5)
                 {
-                    fires[i].transform.localScale -= new Vector3(0.01f, 0.01f, 0.01f);
+                    for (int i = 0; i < fires1.Length; i++)
+                    {
+                        fires1[i].transform.localScale += new Vector3(0.01f, 0.01f, 0.01f);
+                    }
                 }
-            }
+                else
+                {
+                    if (fires1[0].transform.localScale.x > 0)
+                    {
+                        for (int i = 0; i < fires1.Length; i++)
+                        {
+                            fires1[i].transform.localScale -= new Vector3(0.01f, 0.01f, 0.01f);
+                        }
+                    }
+                }
+                break;
+            case 2:
+                if (vol > 5)
+                {
+                    for (int i = 0; i < fires2.Length; i++)
+                    {
+                        fires2[i].transform.localScale += new Vector3(0.01f, 0.01f, 0.01f);
+                    }
+                }
+                else
+                {
+                    if (fires2[0].transform.localScale.x > 0)
+                    {
+                        for (int i = 0; i < fires2.Length; i++)
+                        {
+                            fires2[i].transform.localScale -= new Vector3(0.01f, 0.01f, 0.01f);
+                        }
+                    }
+                }
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            default:
+                break;
         }
+
+        
         
     }
 }

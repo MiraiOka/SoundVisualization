@@ -1019,7 +1019,67 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 131974, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
       propertyPath: m_Name
-      value: Eff_Fire_Fix2
+      value: FireEff2
+      objectReference: {fileID: 0}
+    - target: {fileID: 19890514, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19890514, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19890514, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+      propertyPath: InitialModule.startRotationX.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19890514, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+      propertyPath: InitialModule.startRotationY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 106116, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+      propertyPath: m_Name
+      value: fire2_add
+      objectReference: {fileID: 0}
+    - target: {fileID: 19885226, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+      propertyPath: randomSeed
+      value: -1393496632
+      objectReference: {fileID: 0}
+    - target: {fileID: 19885226, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19885226, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 171520, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+      propertyPath: m_Name
+      value: par2_add
+      objectReference: {fileID: 0}
+    - target: {fileID: 19821252, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+      propertyPath: randomSeed
+      value: -65554983
+      objectReference: {fileID: 0}
+    - target: {fileID: 19821252, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19821252, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19821252, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+      propertyPath: InitialModule.startRotationX.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19821252, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+      propertyPath: InitialModule.startRotationY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 160930, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+      propertyPath: m_Name
+      value: smoke2_alpha
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
@@ -2087,7 +2147,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 131974, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
       propertyPath: m_Name
-      value: Eff_Fire_Fix1
+      value: FireEff1
       objectReference: {fileID: 0}
     - target: {fileID: 19890514, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
       propertyPath: InitialModule.startSizeY.minMaxState
@@ -2320,6 +2380,10 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1022453314}
+--- !u!1 &1049046090 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 106116, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+  m_PrefabInternal: {fileID: 319242976}
 --- !u!1 &1194754619
 GameObject:
   m_ObjectHideFlags: 0
@@ -2445,6 +2509,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d29bc40b7f3df26479d6a0aac211c355, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1231471411 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 160930, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+  m_PrefabInternal: {fileID: 319242976}
 --- !u!1001 &1259691691
 Prefab:
   m_ObjectHideFlags: 0
@@ -2482,11 +2550,75 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 436562, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 131974, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
       propertyPath: m_Name
-      value: Eff_Fire_Fix3
+      value: FireEff3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19890514, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19890514, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19890514, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+      propertyPath: InitialModule.startRotationX.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19890514, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+      propertyPath: InitialModule.startRotationY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19890514, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+      propertyPath: randomSeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 106116, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+      propertyPath: m_Name
+      value: fire3_add
+      objectReference: {fileID: 0}
+    - target: {fileID: 19885226, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+      propertyPath: randomSeed
+      value: -2008913019
+      objectReference: {fileID: 0}
+    - target: {fileID: 19885226, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19885226, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 171520, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+      propertyPath: m_Name
+      value: par3_add
+      objectReference: {fileID: 0}
+    - target: {fileID: 19821252, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+      propertyPath: randomSeed
+      value: -1544074776
+      objectReference: {fileID: 0}
+    - target: {fileID: 19821252, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19821252, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19821252, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+      propertyPath: InitialModule.startRotationX.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19821252, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+      propertyPath: InitialModule.startRotationY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 160930, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+      propertyPath: m_Name
+      value: smoke3_alpha
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
@@ -2866,10 +2998,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49365b8812006ea4690c69b5898fa860, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fires:
+  fires1:
   - {fileID: 913663184}
   - {fileID: 913663183}
   - {fileID: 913663182}
+  fires2:
+  - {fileID: 1049046090}
+  - {fileID: 1707925040}
+  - {fileID: 1231471411}
   text: {fileID: 1673276531}
 --- !u!1 &1594623629
 GameObject:
@@ -2898,8 +3034,8 @@ Transform:
   m_Children:
   - {fileID: 913663181}
   - {fileID: 319242977}
-  - {fileID: 1645249045}
   - {fileID: 1259691692}
+  - {fileID: 1645249045}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2940,11 +3076,75 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 436562, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 131974, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
       propertyPath: m_Name
-      value: Eff_Fire_Fix4
+      value: FireEff4
+      objectReference: {fileID: 0}
+    - target: {fileID: 19890514, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19890514, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19890514, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+      propertyPath: InitialModule.startRotationX.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19890514, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+      propertyPath: InitialModule.startRotationY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19890514, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+      propertyPath: randomSeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 106116, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+      propertyPath: m_Name
+      value: fire4_add
+      objectReference: {fileID: 0}
+    - target: {fileID: 19885226, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19885226, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19885226, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+      propertyPath: randomSeed
+      value: 858602359
+      objectReference: {fileID: 0}
+    - target: {fileID: 171520, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+      propertyPath: m_Name
+      value: par4_add
+      objectReference: {fileID: 0}
+    - target: {fileID: 19821252, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+      propertyPath: randomSeed
+      value: -1465360172
+      objectReference: {fileID: 0}
+    - target: {fileID: 19821252, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19821252, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19821252, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+      propertyPath: InitialModule.startRotationX.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19821252, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+      propertyPath: InitialModule.startRotationY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 160930, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+      propertyPath: m_Name
+      value: smoke4_alpha
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
@@ -3075,6 +3275,10 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1675887490}
   m_Script: {fileID: 11500000, guid: 0decd33ba8702954885a62b5bc1a778e, type: 3}
+--- !u!1 &1707925040 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 171520, guid: 15737e9468c0b40d49fea389518546f2, type: 2}
+  m_PrefabInternal: {fileID: 319242976}
 --- !u!1 &1710926485
 GameObject:
   m_ObjectHideFlags: 0
