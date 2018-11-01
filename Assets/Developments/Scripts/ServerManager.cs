@@ -6,6 +6,8 @@ public class ServerManager : MonoBehaviour {
 
     [SerializeField] GameObject[] fires1;
     [SerializeField] GameObject[] fires2;
+    [SerializeField] GameObject[] fires3;
+    [SerializeField] GameObject[] fires4;
     [SerializeField] Text text;
 
 
@@ -64,8 +66,42 @@ public class ServerManager : MonoBehaviour {
                 }
                 break;
             case 3:
+                if (vol > 5)
+                {
+                    for (int i = 0; i < fires4.Length; i++)
+                    {
+                        fires3[i].transform.localScale += new Vector3(0.01f, 0.01f, 0.01f);
+                    }
+                }
+                else
+                {
+                    if (fires3[0].transform.localScale.x > 0)
+                    {
+                        for (int i = 0; i < fires4.Length; i++)
+                        {
+                            fires3[i].transform.localScale -= new Vector3(0.01f, 0.01f, 0.01f);
+                        }
+                    }
+                }
                 break;
             case 4:
+                if (vol > 5)
+                {
+                    for (int i = 0; i < fires4.Length; i++)
+                    {
+                        fires4[i].transform.localScale += new Vector3(0.01f, 0.01f, 0.01f);
+                    }
+                }
+                else
+                {
+                    if (fires4[0].transform.localScale.x > 0)
+                    {
+                        for (int i = 0; i < fires4.Length; i++)
+                        {
+                            fires4[i].transform.localScale -= new Vector3(0.01f, 0.01f, 0.01f);
+                        }
+                    }
+                }
                 break;
             default:
                 break;
