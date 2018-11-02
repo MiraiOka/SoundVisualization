@@ -30,9 +30,12 @@ public class ServerManager : MonoBehaviour {
             case 1:
                 if (vol > 5)
                 {
-                    for (int i = 0; i < fires1.Length; i++)
+                    if(fires1[0].transform.localScale.x < 2.5f)
                     {
-                        fires1[i].transform.localScale += new Vector3(0.01f, 0.01f, 0.01f);
+                        for (int i = 0; i < fires1.Length; i++)
+                        {
+                            fires1[i].transform.localScale += new Vector3(0.01f, 0.01f, 0.01f);
+                        }
                     }
                 }
                 else
@@ -49,9 +52,12 @@ public class ServerManager : MonoBehaviour {
             case 2:
                 if (vol > 5)
                 {
-                    for (int i = 0; i < fires2.Length; i++)
+                    if (fires2[0].transform.localScale.x < 2.5f)
                     {
-                        fires2[i].transform.localScale += new Vector3(0.01f, 0.01f, 0.01f);
+                        for (int i = 0; i < fires2.Length; i++)
+                        {
+                            fires2[i].transform.localScale += new Vector3(0.01f, 0.01f, 0.01f);
+                        }
                     }
                 }
                 else
@@ -68,16 +74,19 @@ public class ServerManager : MonoBehaviour {
             case 3:
                 if (vol > 5)
                 {
-                    for (int i = 0; i < fires4.Length; i++)
+                    if (fires3[0].transform.localScale.x < 2.5f)
                     {
-                        fires3[i].transform.localScale += new Vector3(0.01f, 0.01f, 0.01f);
+                        for (int i = 0; i < fires3.Length; i++)
+                        {
+                            fires3[i].transform.localScale += new Vector3(0.01f, 0.01f, 0.01f);
+                        }
                     }
                 }
                 else
                 {
                     if (fires3[0].transform.localScale.x > 0)
                     {
-                        for (int i = 0; i < fires4.Length; i++)
+                        for (int i = 0; i < fires3.Length; i++)
                         {
                             fires3[i].transform.localScale -= new Vector3(0.01f, 0.01f, 0.01f);
                         }
@@ -87,9 +96,12 @@ public class ServerManager : MonoBehaviour {
             case 4:
                 if (vol > 5)
                 {
-                    for (int i = 0; i < fires4.Length; i++)
+                    if (fires4[0].transform.localScale.x < 2.5f)
                     {
-                        fires4[i].transform.localScale += new Vector3(0.01f, 0.01f, 0.01f);
+                        for (int i = 0; i < fires4.Length; i++)
+                        {
+                            fires4[i].transform.localScale += new Vector3(0.01f, 0.01f, 0.01f);
+                        }
                     }
                 }
                 else
