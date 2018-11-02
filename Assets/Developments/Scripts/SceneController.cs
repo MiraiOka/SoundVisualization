@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour {
 
+    AudioSource audio;
+    [SerializeField] SoundController sound;
 
 	void Start () {
         InteractionManager.InteractionSourcePressed += tapHomebase;
@@ -11,6 +13,7 @@ public class SceneController : MonoBehaviour {
 
     void tapHomebase(InteractionSourcePressedEventArgs e)
     {
+        sound.soundsOK();
         InteractionManager.InteractionSourcePressed -= tapHomebase;
         SceneManager.LoadScene("Main");
     }
