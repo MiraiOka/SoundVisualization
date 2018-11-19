@@ -10,24 +10,41 @@ public class ServerManager : MonoBehaviour {
     [SerializeField] GameObject[] fires4;
     [SerializeField] Text text;
 
+    float avg = 0;
+    float time = 0;
+    int i = 0;
+
 
 	void Start () {
         uOscServer server = GetComponent<uOscServer>();
         server.onDataReceived.AddListener(OnDataReceived);
 	}
-	
-	void OnDataReceived(Message message)
+
+    private void Update()
+    {
+        time += Time.deltaTime;
+    }
+
+    void OnDataReceived(Message message)
     {
         int num;
         num = (int)message.values[0];
         float vol;
         vol = (float)message.values[1];
-        Debug.Log(vol);
-        text.text = vol.ToString();
+        int hoge = (int)message.values[2];
+        //Debug.Log(vol);
+
+        
 
         switch (num)
         {
             case 1:
+                avg *= i;
+                avg += time;
+                i++;
+                avg /= i;
+                text.text = avg.ToString();
+                time = 0;
                 if (vol > 5)
                 {
                     if(fires1[0].transform.localScale.x < 2.5f)
