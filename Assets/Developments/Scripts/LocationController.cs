@@ -149,6 +149,7 @@ public class LocationController : MonoBehaviour {
                 {
                     target = Target.fin;
                     InteractionManager.InteractionSourcePressed -= InteractionSourcePressed;
+
                     Destroy(panel);
 
 
