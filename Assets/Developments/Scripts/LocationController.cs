@@ -38,8 +38,6 @@ public class LocationController : MonoBehaviour {
 
     List<Point> points12 = new List<Point>();
     Point point12 = new Point();
-    List<Point> points123 = new List<Point>();
-    Point point123 = new Point();
 
 
     enum Target
@@ -114,7 +112,6 @@ public class LocationController : MonoBehaviour {
 
                 float min = 9999;
                 int min1 = -1;
-                int min2 = -1;
                 int min3 = -1;
 
                 for (int i = 0; i < size; i++)
@@ -133,12 +130,9 @@ public class LocationController : MonoBehaviour {
                             Debug.Log(23);
                             if (diff31 < range)
                             {
-                                float hoge = points12[j].diff + diff23 + diff31;
-
                                 if (points12[j].diff + diff23 + diff31 < min)
                                 {
                                     min1 = points12[j].first;
-                                    min2 = points12[j].second;
                                     min3 = i;
                                 }
                             }
