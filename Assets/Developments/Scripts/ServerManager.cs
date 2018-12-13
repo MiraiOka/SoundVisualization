@@ -84,20 +84,24 @@ public class ServerManager : MonoBehaviour {
         {
             case 1:
                 ///////////////////////////////
-                res1_1.text = communicationTime.ToString();
+                if(n > 500)
+                {
+                    res1_1.text = communicationTime.ToString();
 
-                res2_1.text = receptAvg.ToString();
+                    res2_1.text = receptAvg.ToString();
 
-                avg1 *= n1;
-                n1++;
-                avg1 = (avg1 + time1) / n1;
-                res3_1.text = avg1.ToString();
-                time1 = 0;
+                    avg1 *= n1;
+                    n1++;
+                    avg1 = (avg1 + time1) / n1;
+                    res3_1.text = avg1.ToString();
+                    time1 = 0;
 
-     
-                if(n-preN1 == 1) correctCount1++;
-                res4_1.text = (n1 / correctCount1).ToString();
-                preN1 = n;
+                    if (n - preN1 == 1) correctCount1++;
+                    res4_1.text = (n1 / correctCount1).ToString();
+                    preN1 = n;
+                }
+
+               
                 ///////////////////////////////
                 if (vol > 5)
                 {
@@ -122,19 +126,24 @@ public class ServerManager : MonoBehaviour {
                 break;
             case 2:
                 ///////////////////////////////
-                res1_2.text = communicationTime.ToString();
+                if (n > 500)
+                {
+                    res1_2.text = communicationTime.ToString();
 
-                res2_2.text = receptAvg.ToString();
+                    res2_2.text = receptAvg.ToString();
 
-                avg2 *= n2;
-                n2++;
-                avg2 = (avg2 + time2) / n2;
-                res3_2.text = avg2.ToString();
-                time2 = 0;
+                    avg2 *= n2;
+                    n2++;
+                    avg2 = (avg2 + time2) / n2;
+                    res3_2.text = avg2.ToString();
+                    time2 = 0;
 
-                if (n - preN2 == 1) correctCount2++;
-                res4_2.text = (n2 / correctCount2).ToString();
-                preN2 = n;
+                    if (n - preN2 == 1) correctCount2++;
+                    res4_2.text = (n2 / correctCount2).ToString();
+                    preN2 = n;
+                }
+
+                
                 ///////////////////////////////
                 if (vol > 5)
                 {
@@ -159,18 +168,25 @@ public class ServerManager : MonoBehaviour {
                 break;
             case 3:
                 ///////////////////////////////
-                res1_3.text = communicationTime.ToString();
-                res2_3.text = receptAvg.ToString();
+                
+                if (n > 500)
+                {
 
-                avg3 *= n3;
-                n3++;
-                avg3 = (avg3 + time3) / n3;
-                res3_3.text = avg3.ToString();
-                time3 = 0;
+                    res1_3.text = communicationTime.ToString();
+                    res2_3.text = receptAvg.ToString();
 
-                if (n - preN3 == 1) correctCount3++;
-                res4_3.text = (n3 / correctCount3).ToString();
-                preN3 = n;
+                    avg3 *= n3;
+                    n3++;
+                    avg3 = (avg3 + time3) / n3;
+                    res3_3.text = avg3.ToString();
+                    time3 = 0;
+
+                    if (n - preN3 == 1) correctCount3++;
+                    res4_3.text = (n3 / correctCount3).ToString();
+                    preN3 = n;
+                }
+
+                
                 ///////////////////////////////
                 if (vol > 5)
                 {
