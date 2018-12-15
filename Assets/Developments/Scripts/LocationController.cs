@@ -41,6 +41,14 @@ public class LocationController : MonoBehaviour {
     List<Point> points123 = new List<Point>();
     Point point123 = new Point();
 
+    [SerializeField] GameObject okButton;
+    [SerializeField] GameObject noButton;
+
+    [SerializeField] GameObject[] fires;
+
+    Vector3 firstObjectPos;
+    Quaternion firstObjectRot;
+
 
     enum Target
     {
@@ -65,6 +73,9 @@ public class LocationController : MonoBehaviour {
         firstRayPos = new Vector3[size];
         secondRayPos = new Vector3[size];
         thirdRayPos = new Vector3[size];
+
+        firstObjectPos = firstObject.transform.position;
+        firstObjectRot = firstObject.transform.rotation;
     }
 
     void InteractionSourcePressed(InteractionSourcePressedEventArgs ev)
@@ -147,12 +158,6 @@ public class LocationController : MonoBehaviour {
                 }
                 if (min1 != -1)
                 {
-                    target = Target.fin;
-                    InteractionManager.InteractionSourcePressed -= InteractionSourcePressed;
-
-                    Destroy(panel);
-
-
                     Vector3 vec = firstRayPos[min1] - firstObject.transform.position;
                     gameObject.transform.position += vec;
                     firstObject.transform.parent = null;
@@ -161,7 +166,13 @@ public class LocationController : MonoBehaviour {
                     gameObject.transform.parent = firstObject.transform.transform;
                     firstObject.transform.LookAt(thirdRayPos[min3]);
 
-                    server.SetActive(true);
+                    text.text = "炎の位置はこれでいいですか？";
+                    for(int i = 0; i < fires.Length; i++)
+                    {
+                        fires[i].transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+                    }
+                    okButton.SetActive(true);
+                    noButton.SetActive(true);
                 }
                 else
                 {
@@ -175,5 +186,39 @@ public class LocationController : MonoBehaviour {
             default:
                 break;
         }
+    }
+
+    public void tapOKButton()
+    {
+        for (int i = 0; i < fires.Length; i++)
+        {
+            fires[i].transform.localScale = new Vector3(0, 0, 0);
+        }
+        target = Target.fin;
+        InteractionManager.InteractionSourcePressed -= InteractionSourcePressed;
+
+        Destroy(panel);
+
+        server.SetActive(true);
+
+        
+    }
+
+    public void tapNoButton()
+    {
+        for (int i = 0; i < fires.Length; i++)
+        {
+            fires[i].transform.localScale = new Vector3(0, 0, 0);
+        }
+        target = Target.first;
+        text.text = "ヨッシーをクリックしてください";
+        okButton.SetActive(false);
+        noButton.SetActive(false);
+        gameObject.transform.parent = null;
+        gameObject.transform.position = Vector3.zero;
+        gameObject.transform.rotation = Quaternion.Euler(Vector3.zero);
+        firstObject.transform.parent = gameObject.transform;
+        firstObject.transform.position = firstObjectPos;
+        firstObject.transform.rotation = firstObjectRot;
     }
 }

@@ -12,7 +12,7 @@ public class ServerManager : MonoBehaviour {
 	void Start () {
         uOscServer server = GetComponent<uOscServer>();
         server.onDataReceived.AddListener(OnDataReceived);
-	}
+    }
 
     void OnDataReceived(Message message)
     {
