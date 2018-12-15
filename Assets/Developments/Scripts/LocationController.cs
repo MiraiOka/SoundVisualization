@@ -49,6 +49,8 @@ public class LocationController : MonoBehaviour {
     Vector3 firstObjectPos;
     Quaternion firstObjectRot;
 
+    SoundController sound;
+
 
     enum Target
     {
@@ -76,12 +78,16 @@ public class LocationController : MonoBehaviour {
 
         firstObjectPos = firstObject.transform.position;
         firstObjectRot = firstObject.transform.rotation;
+
+        sound = GetComponent<SoundController>();
     }
 
     void InteractionSourcePressed(InteractionSourcePressedEventArgs ev)
     {
         Vector3 headPos = holoCamera.transform.position;
         Vector3 direction = holoCamera.transform.forward;
+
+        sound.soundsOK();
 
         switch (target)
         {
@@ -141,7 +147,6 @@ public class LocationController : MonoBehaviour {
                         {
                             float tmpDis31 = Vector3.Distance(thirdRayPos[i], firstRayPos[points12[j].first]);
                             float diff31 = Mathf.Abs(tmpDis31 - distance31);
-                            Debug.Log(23);
                             if (diff31 < range)
                             {
                                 float hoge = points12[j].diff + diff23 + diff31;

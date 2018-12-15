@@ -26,7 +26,7 @@ public class ServerManager : MonoBehaviour {
             case 1:
                 if (vol > 5)
                 {
-                    if(fires1[0].transform.localScale.x < 2.5f)
+                    if(fires1[0].transform.localScale.x < 3.5f)
                     {
                         for (int i = 0; i < fires1.Length; i++)
                         {
@@ -48,7 +48,7 @@ public class ServerManager : MonoBehaviour {
             case 2:
                 if (vol > 5)
                 {
-                    if (fires2[0].transform.localScale.x < 2.5f)
+                    if (fires2[0].transform.localScale.x < 3.5f)
                     {
                         for (int i = 0; i < fires2.Length; i++)
                         {
@@ -70,7 +70,7 @@ public class ServerManager : MonoBehaviour {
             case 3:
                 if (vol > 5)
                 {
-                    if (fires3[0].transform.localScale.x < 2.5f)
+                    if (fires3[0].transform.localScale.x < 3.5f)
                     {
                         for (int i = 0; i < fires3.Length; i++)
                         {
@@ -92,7 +92,7 @@ public class ServerManager : MonoBehaviour {
             case 4:
                 if (vol > 5)
                 {
-                    if (fires4[0].transform.localScale.x < 2.5f)
+                    if (fires4[0].transform.localScale.x < 3.5f)
                     {
                         for (int i = 0; i < fires4.Length; i++)
                         {
