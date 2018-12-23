@@ -99,7 +99,7 @@ public class LocationController : MonoBehaviour {
                 }
 
                 target = Target.second;
-                text.text = "ムックをクリックしてください";
+                text.text = "2をクリックしてください";
 
 
                 break;
@@ -124,7 +124,7 @@ public class LocationController : MonoBehaviour {
                 }
 
                 target = Target.third;
-                text.text = "ガチャピンをクリックしてください";
+                text.text = "3をクリックしてください";
 
                 break;
             case Target.third:
@@ -182,7 +182,7 @@ public class LocationController : MonoBehaviour {
                 else
                 {
                     target = Target.first;
-                    text.text = "ヨッシーをクリックしてください";
+                    text.text = "1をクリックしてください";
                 }
 
                 break;
@@ -205,8 +205,6 @@ public class LocationController : MonoBehaviour {
         Destroy(panel);
 
         server.SetActive(true);
-
-        
     }
 
     public void tapNoButton()
@@ -216,7 +214,7 @@ public class LocationController : MonoBehaviour {
             fires[i].transform.localScale = new Vector3(0, 0, 0);
         }
         target = Target.first;
-        text.text = "ヨッシーをクリックしてください";
+        text.text = "1をクリックしてください";
         okButton.SetActive(false);
         noButton.SetActive(false);
         gameObject.transform.parent = null;
