@@ -84,6 +84,12 @@ public class ServerManager : MonoBehaviour {
         {
             case 1:
                 ///////////////////////////////
+
+                if(n == 1)
+                {
+                    res1_1.text = "waiting...";
+                }
+
                 if(n > 500)
                 {
                     res1_1.text = communicationTime.ToString();
@@ -126,6 +132,12 @@ public class ServerManager : MonoBehaviour {
                 break;
             case 2:
                 ///////////////////////////////
+                if (n == 1)
+                {
+                    res1_2.text = "waiting...";
+                }
+
+
                 if (n > 500)
                 {
                     res1_2.text = communicationTime.ToString();
@@ -168,7 +180,12 @@ public class ServerManager : MonoBehaviour {
                 break;
             case 3:
                 ///////////////////////////////
-                
+                if (n == 1)
+                {
+                    res1_3.text = "waiting...";
+                }
+
+
                 if (n > 500)
                 {
 
@@ -205,28 +222,6 @@ public class ServerManager : MonoBehaviour {
                         for (int i = 0; i < fires3.Length; i++)
                         {
                             fires3[i].transform.localScale -= new Vector3(0.01f, 0.01f, 0.01f);
-                        }
-                    }
-                }
-                break;
-            case 4:
-                if (vol > 5)
-                {
-                    if (fires4[0].transform.localScale.x < 2.5f)
-                    {
-                        for (int i = 0; i < fires4.Length; i++)
-                        {
-                            fires4[i].transform.localScale += new Vector3(0.01f, 0.01f, 0.01f);
-                        }
-                    }
-                }
-                else
-                {
-                    if (fires4[0].transform.localScale.x > 0)
-                    {
-                        for (int i = 0; i < fires4.Length; i++)
-                        {
-                            fires4[i].transform.localScale -= new Vector3(0.01f, 0.01f, 0.01f);
                         }
                     }
                 }
