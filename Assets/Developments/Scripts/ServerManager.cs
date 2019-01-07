@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using uOSC;
-using UnityEngine.UI;
 
 public class ServerManager : MonoBehaviour {
 
@@ -8,9 +7,6 @@ public class ServerManager : MonoBehaviour {
     [SerializeField] GameObject[] fires2;
     [SerializeField] GameObject[] fires3;
     [SerializeField] GameObject[] fires4;
-
-    [SerializeField] int addAvg = 0;
-    [SerializeField] Text text;
 
     int totalCount = 0;
     float avgVol = 0;
@@ -35,12 +31,10 @@ public class ServerManager : MonoBehaviour {
             avgVol /= totalCount;
         }
 
-        text.text = avgVol.ToString() + " + " + addAvg.ToString();
-
         switch (num)
         {
             case 1:
-                if (vol > avgVol + addAvg)
+                if (vol > avgVol)
                 {
                     if(fires1[0].transform.localScale.x < 3.5f)
                     {
@@ -62,7 +56,7 @@ public class ServerManager : MonoBehaviour {
                 }
                 break;
             case 2:
-                if (vol > avgVol + addAvg)
+                if (vol > avgVol)
                 {
                     if (fires2[0].transform.localScale.x < 3.5f)
                     {
@@ -84,7 +78,7 @@ public class ServerManager : MonoBehaviour {
                 }
                 break;
             case 3:
-                if (vol > avgVol + addAvg)
+                if (vol > avgVol)
                 {
                     if (fires3[0].transform.localScale.x < 3.5f)
                     {
@@ -108,15 +102,5 @@ public class ServerManager : MonoBehaviour {
             default:
                 break;
         }
-    }
-
-    public void plusAvg()
-    {
-        addAvg += 500;
-    }
-
-    public void minusAvg()
-    {
-        addAvg -= 500;
     }
 }

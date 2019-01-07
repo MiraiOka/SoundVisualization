@@ -163,7 +163,9 @@ public class LocationController : MonoBehaviour {
                 }
                 if (min1 != -1)
                 {
+                    InteractionManager.InteractionSourcePressed -= InteractionSourcePressed;
                     Vector3 vec = firstRayPos[min1] - firstObject.transform.position;
+                    min1 = -1;
                     gameObject.transform.position += vec;
                     firstObject.transform.parent = null;
 
@@ -200,7 +202,7 @@ public class LocationController : MonoBehaviour {
             fires[i].transform.localScale = new Vector3(0, 0, 0);
         }
         target = Target.fin;
-        InteractionManager.InteractionSourcePressed -= InteractionSourcePressed;
+        
 
         Destroy(panel);
 
@@ -209,6 +211,7 @@ public class LocationController : MonoBehaviour {
 
     public void tapNoButton()
     {
+        InteractionManager.InteractionSourcePressed += InteractionSourcePressed;
         for (int i = 0; i < fires.Length; i++)
         {
             fires[i].transform.localScale = new Vector3(0, 0, 0);

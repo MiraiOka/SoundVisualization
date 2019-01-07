@@ -1710,8 +1710,6 @@ MonoBehaviour:
   - {fileID: 1892458992}
   - {fileID: 1497910304}
   - {fileID: 1857699729}
-  addAvg: 0
-  text: {fileID: 602452129}
 --- !u!1 &1476544418
 GameObject:
   m_ObjectHideFlags: 0
